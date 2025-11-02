@@ -659,9 +659,15 @@ ul.menu-col li a:hover, ul.menu-col li a:focus {
 	display: inline-block;
 	padding: 0 10px;
 }
-
+.logo {
+	position: relative;
+}
 .logo img {
-	max-width: 250px;
+	position: absolute;
+	max-width: 400px;
+	top: -10px;
+	left: -200px;
+
 }
 
 /* inner box */

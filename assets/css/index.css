@@ -121,7 +121,7 @@
 
 /*service*/
 .sevice-box {
-
+	margin-bottom: 50px;
 }
 .sevice-box figure {
 	margin: 0px;
@@ -131,7 +131,7 @@
 }
 .sevice-box .service-text {
 	border: 1px solid #c3c3c3;
-	padding: 25px 20px;
+	padding: 25px 20px 0px 20px;
 	margin: -78px 25px 0px 25px;
 	position: relative;
 	z-index: 3;

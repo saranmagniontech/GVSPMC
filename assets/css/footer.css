@@ -165,6 +165,13 @@
 .footer-logo {
 	margin-bottom: 20px;
 	display: inline-block;
+	position: relative;
+}
+.footer-logo img {
+	max-width: 200px;
+	position: absolute;
+	left: -55px;
+	top: -35px;
 }
 /* Bottom Bar
  -------------------------------------------------------------- */

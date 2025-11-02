@@ -655,7 +655,7 @@ ul.menu-col li a:hover, ul.menu-col li a:focus {
 }
 
 .logo img {
-	max-width: 250px;
+	max-width: 100%;
 }
 header ul {
 	list-style: outside none none;

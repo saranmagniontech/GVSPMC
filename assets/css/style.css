@@ -4534,6 +4534,7 @@ transform: scale(1);
 .img-scale figure {
 	overflow: hidden;
 	margin: 0px;
+	height: 250px;
 }
 .img-scale img {
 	transform: scale(1);
@@ -4544,6 +4545,7 @@ transform: scale(1);
 	-moz-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 	-webkit-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 	-o-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	height: 100%;
 }
 .img-scale:hover img {
 	transform: scale(1.1);
@@ -5864,7 +5866,7 @@ div .secondary_bg {
 	color: #222;
 }
 .text-content {
-	padding-bottom: 20px;
+	padding-bottom: 60px;
 }
 /*carousel slider*/
 .carousel-slider .carousel_block_item {
