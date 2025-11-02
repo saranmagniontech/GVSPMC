@@ -4081,6 +4081,7 @@ transform: scale(1);
 
 .item-box a {
 	display: inline-block;
+	
 }
 
 .item-box:hover .item-mask {
@@ -4117,9 +4118,11 @@ transform: scale(1);
 	overflow: hidden;
 	display: block;
 	background: #000;
+	height: 250px;
 }
 .item-box img {
 	width: 100%;
+	height: 250px;
 }
 .item-box:after {
 	content: '';
