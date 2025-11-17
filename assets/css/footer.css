@@ -164,16 +164,20 @@
 }
 .footer-logo {
 	margin-bottom: 20px;
-	display: inline-block;
+	display: block;
 	position: relative;
 }
 .footer-logo img {
 	max-width: 200px;
 	position: absolute;
 	left: -55px;
-	top: -35px;
+	top: -55px;
 	z-index: 10;
 }
+.mar{
+	margin-top: 50px;
+}
+
 /* Bottom Bar
  -------------------------------------------------------------- */
 #bottom {
