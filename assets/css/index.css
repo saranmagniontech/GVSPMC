@@ -335,3 +335,172 @@
 	display: inline-block;
 }
 
+/* Form Container */
+/* Left Align Form */
+.form-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;   /* Moves form to the LEFT */
+    align-items: flex-start;
+}
+
+/* Optional: limit width so right side remains empty */
+.form-wrapper {
+    width: 100%;
+    max-width: 550px;   /* You can change size */
+}
+
+
+.form-wrapper {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Titles */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Input Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    background: #f7f7f7;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #007bff;
+    background: #fff;
+    outline: none;
+}
+
+/* Textarea */
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #9f262d;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #0056c7;
+}
+
+/* Error Message */
+.error-message {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Success Message */
+#successMessage {
+    background: #28a745;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 15px;
+    display: none;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 20px;
+    }
+}
+
+/* Background wrapper */
+.contact-container {
+    width: 90%;                  /* Adjust background width */
+    max-width: 1200px;           /* Optional max width */
+    margin: 30px auto;           /* Center the whole block */
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: flex;               /* IMPORTANT: side-by-side layout */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Left form section */
+.form-section {
+    flex: 1;                     /* Form takes available width */
+}
+
+/* Right image section */
+.image-section {
+    width: 45%;                  /* Adjust image side width */
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Inputs styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #9f262d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
