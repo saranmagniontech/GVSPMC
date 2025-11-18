@@ -1,9 +1,10 @@
-<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
-DirectoryIndex index.html
-RewriteRule ^index.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
+
+# Redirect index.html → root domain
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
-</IfModule>
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
