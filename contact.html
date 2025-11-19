@@ -529,6 +529,29 @@
   <!-- END FOOTER --> 
 		<!-- Site Wraper End -->
 	<!-- Site Wraper End --> 
+	 <SCript>document.addEventListener('DOMContentLoaded', function () {
+
+    const menuTrigger = document.querySelector('.menu-trigger');
+    const nav = document.querySelector('.main-nav .nav');
+
+    if (menuTrigger && nav) {
+
+      // Toggle menu on icon click
+      menuTrigger.addEventListener('click', function (e) {
+        e.stopPropagation();  
+        nav.classList.toggle('show');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target)) {
+          nav.classList.remove('show');
+        }
+      });
+    }
+
+});</SCript>
+	 <SCript>document.getElementById("year").textContent = new Date().getFullYear();</SCript>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/js/tether.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
