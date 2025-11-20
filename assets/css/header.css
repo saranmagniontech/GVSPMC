@@ -659,16 +659,6 @@ ul.menu-col li a:hover, ul.menu-col li a:focus {
 	display: inline-block;
 	padding: 0 10px;
 }
-.logo {
-	position: relative;
-}
-.logo img {
-	position: absolute;
-	max-width: 400px;
-	top: -10px;
-	left: -200px;
-
-}
 
 /* inner box */
 header ul {
@@ -1003,4 +993,204 @@ header ul li {
 	.navbar-brand > img {
 		display: block;
 	}
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Simple layout helpers (since Bootstrap is not loaded) */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-bottom: px;
+}
+
+
+.row {
+  width: 100%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* ===========================
+   HEADER STYLING
+=========================== */
+
+.header-area {
+  background: #ffffff;
+  position: relative; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  padding: 16px 0;
+}
+
+
+/* main nav bar */
+/* Center the header content */
+.header-area .container {
+  width: 100%;
+}
+
+/* Main nav centered within the container */
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* LOGO IMAGE + TEXT */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.logo img {
+  height: 45px;   /* adjust logo size if needed */
+  width: auto;
+  display: block;
+  gap: 12px;
+  
+}
+
+.logo h3 {
+  color: #9f262d;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* NAVIGATION LINKS */
+
+.main-nav .nav {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+.main-nav .nav li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #222222;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.main-nav .nav li a:hover,
+.main-nav .nav li a.active {
+  color: #9f262d;
+}
+
+/* CONTACT BUTTON */
+
+.main-red-button a {
+  background: #9f262d;
+  padding: 10px 20px;
+  border-radius: 40px;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main-red-button a:hover {
+  background:#9f262d;
+}
+
+/* MENU TRIGGER (MOBILE BUTTON) */
+
+.menu-trigger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-trigger .bar {
+  width: 28px;
+  height: 3px;
+  background: #222;
+  border-radius: 5px;
+}
+
+.menu-trigger span {
+  font-size: 16px;
+}
+/* hide hamburger icon when menu is active */
+.menu-trigger.hide {
+  display: none !important;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+	.menu-trigger.hide {
+  display: none !important;
+}
+  .logo h3 {
+    display: none;
+  }
+
+
+  .main-nav {
+    flex-wrap: wrap;
+  }
+
+  .main-nav .nav li {
+    width: 100%;
+    padding: 6px 16px;
+  }
+
+  .main-nav .nav li a {
+    display: block;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .menu-trigger {
+    display: flex;
+  }
+
+  .main-nav .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-top: 10px;
+    padding: 15px 0;
+  }
+
+  .main-nav .nav.show {
+    display: flex;
+  }
+
 }
