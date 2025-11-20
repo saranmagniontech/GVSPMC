@@ -1,62 +1,52 @@
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default submission
+    let form = e.target;
+    let valid = true;
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Clear previous error messages
+    form.querySelectorAll('.error-message').forEach(el => el.textContent = '');
 
-    const form = document.getElementById("contactForm");
-    const successBox = document.getElementById("successMessage");
+    // -------------------------------
+    // Name: required + letters & spaces only
+    const name = form.name.value.trim();
+    if(name === '') {
+        form.name.nextElementSibling.textContent = 'Name is required';
+        valid = false;
+    } else if(!/^[a-zA-Z\s]+$/.test(name)) {
+        form.name.nextElementSibling.textContent = 'Name can contain only letters and spaces';
+        valid = false;
+    }
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault(); // prevent form from submitting immediately
+    // Phone: required + exactly 10 digits
+    const phone = form.phone.value.trim();
+    if(phone === '') {
+        form.phone.nextElementSibling.textContent = 'Phone number is required';
+        valid = false;
+    } else if(!/^\d{10}$/.test(phone)) {
+        form.phone.nextElementSibling.textContent = 'Phone number must be 10 digits';
+        valid = false;
+    }
 
-        let isValid = true;
+    // Email: required + valid email format
+    const email = form.email.value.trim();
+    if(email === '') {
+        form.email.nextElementSibling.textContent = 'Email is required';
+        valid = false;
+    } else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        form.email.nextElementSibling.textContent = 'Enter a valid email';
+        valid = false;
+    }
 
-        // Clear previous errors
-        const errors = form.querySelectorAll(".error-message");
-        errors.forEach(err => err.style.display = "none");
+    // Message: required
+    const message = form.message.value.trim();
+    if(message === '') {
+        form.message.nextElementSibling.textContent = 'Message is required';
+        valid = false;
+    }
+    
 
-        const inputs = form.querySelectorAll(".form-input, .form-textarea");
-
-        inputs.forEach(input => {
-            const errorMsg = input.nextElementSibling;
-
-            if (input.hasAttribute("required") && input.value.trim() === "") {
-                errorMsg.innerText = "This field is required";
-                errorMsg.style.display = "block";
-                isValid = false;
-            }
-
-            // Email validation
-            if (input.name === "email" && input.value.trim() !== "") {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(input.value)) {
-                    errorMsg.innerText = "Enter a valid email address";
-                    errorMsg.style.display = "block";
-                    isValid = false;
-                }
-            }
-
-            // Phone validation (10 digits only)
-            if (input.name === "phone" && input.value.trim() !== "") {
-                const phonePattern = /^[0-9]{10}$/;
-                if (!phonePattern.test(input.value)) {
-                    errorMsg.innerText = "Phone number must be 10 digits";
-                    errorMsg.style.display = "block";
-                    isValid = false;
-                }
-            }
-        });
-
-        // If invalid → stop
-        if (!isValid) {
-            return;
-        }
-
-        // If valid → submit the form
-        successBox.innerText = "Message sent successfully! We'll get back to you soon.";
-        successBox.style.display = "block";
-
-        setTimeout(() => {
-            form.submit(); // Real form submission to formsubmit.co
-        }, 800); // small delay so user sees success
-    });
+    // Submit form if all validations pass
+    if(valid) {
+        form.submit();
+    }
 });
-
