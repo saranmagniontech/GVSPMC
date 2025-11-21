@@ -141,7 +141,12 @@
 	z-index: 2;
 	top: 0;
 	transition: all 0.3s ease-in-out;
-	height: 320px;
+	height: 255px;
+}
+@media (max-width: 767px) {
+	.sevice-box .service-text {
+        height: 320px;           /* centered content on mobile */
+    }
 }
 .sevice-box:hover .service-text {
 	top: -10px;
@@ -294,6 +299,10 @@
 	.poins ul li {
 		width: 100%;
 	}
+	.sevice-box {
+        margin-bottom: 10px; 
+		align-items: center;  /* clean spacing for mobile */
+    }
 }
 .poins ul li i {
 	font-size: 25px;
@@ -338,22 +347,18 @@
 /* Form Container */
 /* Left Align Form */
 .form-section {
-    width: 100%;
+    width: 756px;
     display: flex;
     justify-content: flex-start;   /* Moves form to the LEFT */
     align-items: flex-start;
 }
 
-/* Optional: limit width so right side remains empty */
-.form-wrapper {
-    width: 100%;
-    max-width: 550px;   /* You can change size */
-}
+
 
 
 .form-wrapper {
     width: 100%;
-    max-width: 650px;
+    max-width: 756px;
     background: #ffffff;
     padding: 25px 30px;
     border-radius: 10px;
@@ -419,7 +424,7 @@
 }
 
 .submit-btn:hover {
-    background: #28303b;
+    background: #0056c7;
 }
 
 /* Error Message */
@@ -445,6 +450,18 @@
 /* Responsive */
 @media (max-width: 768px) {
     .form-wrapper {
-        padding: 20px;
+        padding: 10px;
+		align-items: center;
+		justify-content: center; /* Center form */
     }
+	.form-section {
+        width: 100%;          /* Full width for mobile */        /* Add spacing */
+        margin: 0;
+		padding: 10px;
+        justify-content: center; /* Center form */
+        align-items: center;
+        flex-direction: column;  /* Stack content vertically */
+    }
+
+
 }

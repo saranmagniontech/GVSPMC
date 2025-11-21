@@ -623,15 +623,14 @@ button:focus {
   .padding {
     padding-top: 90px;
     padding-bottom: 90px;
-    padding-left: 90px;
-    padding-right: 90px;
+
   }
 }
 
 /* Mobile/Tablet — Reduce padding */
 @media (max-width: 991px) {
   .padding {
-    padding: 20px 15px; /* or 0px if you want no padding */
+    padding: 30px 10px; /* or 0px if you want no padding */
   }
 }
 
@@ -5835,12 +5834,21 @@ div .secondary_bg {
 .testimonial-img {
 	position: relative;
 	top: -40px;
+
 }
 .img-circle.img-border {
-	border: 6px solid #f5f0f0;
-	width: 80px !important;
-	margin-left: auto;
-	margin-right: auto;
+    border: 6px solid #f5f0f0;
+    width: 200px !important;   /* Increase size here */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media (max-width: 576px) {
+    .img-circle.img-border {
+        width: 150px !important;   /* Slightly smaller on mobile */
+    }
 }
 .testimonial-author {
 
