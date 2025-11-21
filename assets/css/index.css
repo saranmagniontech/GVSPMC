@@ -281,6 +281,7 @@
 	}
 	.registration_section .appointment {
 		width: 100%;
+		padding: 0;
 	}
 }
 
